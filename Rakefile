@@ -3,7 +3,7 @@ require "rake/testtask"
 require "rake/gempackagetask"
 require "rake/rdoctask"
 require "rake/clean"
-require 'lib/disqus/version'
+require "./lib/disqus/version"
 
 CLEAN << "pkg" << "doc" << "coverage"
 
