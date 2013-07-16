@@ -43,6 +43,9 @@ module Disqus
         if opts[:identifier]
           s << '<script type="text/javascript">var disqus_identifier = "' + opts[:identifier].to_s + '";</script>'
         end
+        if opts[:title]
+          s << '<script type="text/javascript">var disqus_title = "' + opts[:title].to_s + '";</script>'
+        end
         
         s << '<div id="disqus_thread"></div>'
         s << '<script type="text/javascript" src="' + THREAD + '"></script>'
