@@ -207,7 +207,7 @@ module Disqus
       private
 
       def sso action, opts
-        message = (action == :login ? {'id' => opts[:user_id], 'username' => opts[:username], 'email' => opts[:email]} : {})
+        message = (action == :login ? {'id' => opts[:user_id], 'username' => opts[:username], 'email' => opts[:email], 'avatar' => opts[:avatar]} : {})
         message = Base64.encode64(message.to_json).gsub("\n", "")
         timestamp = Time.now.to_i
 
